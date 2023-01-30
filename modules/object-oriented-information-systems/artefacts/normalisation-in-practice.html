@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Normalisation in practice</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../../assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Editorial</strong> by HTML5 UP</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Normalisation in practice</h1>
+									</header>
+
+									<hr class="major" />
+									
+									<p>Given a set of database tables for a property lettings business, I have develop a table structure that conforms to third normal form (3NF).</p>
+									
+									<div class="row">
+										<div class="col-12">
+
+											<p>The relationships between the tables are as follows:</p>
+											<ol>
+												<li>One-to-one relationship between Property and Owner, where the primary key of the Properties table (Property_ID) is a foreign key in the Owners table (Owner_ID). This means that each property has one owner and each owner can own one property.</li>
+
+												<li>One-to-one relationship between Property and Client, where the primary key of the Properties table (Property_ID) is a foreign key in the Clients table (Client_ID). This means that each property has one client and each client can rent one property.</li>
+
+												<li>One-to-many relationship between Property and Maintenance, where the primary key of the Properties table (Property_ID) is a foreign key in the Maintenance table (Property_ID). This means that each property can have multiple maintenance records and each maintenance record is associated with one property.</li>
+
+												<li>One-to-one relationship between Maintenance and Tenant, where the primary key of the Maintenance table (Tenant_ID) is a foreign key in the Tenants table (Tenant_ID). This means that each maintenance record is associated with one tenant and each tenant can have one maintenance record.</li>
+
+												<li>One-to-one relationship between Maintenance and Contractor, where the primary key of the Maintenance table (Contractor_ID) is a foreign key in the Contractors table (Contractor_ID). This means that each maintenance record is associated with one contractor and each contractor can have one maintenance record.</li>
+											</ol>
+
+										</div>
+									</div>
+
+									<p>By having these relationships, the data is now well-organized and follows the third normal form (3NF) principles of no duplicated data, no partial dependency and no transitive dependency. This also makes it easy to maintain and update the data as well as making it more efficient for querying and reporting.</p>
+
+									<hr class="major" />
+
+									<h3>Module learning outcomes</h3>
+
+									<div class="row">
+										<div class="col-12">
+
+											<p>Designing a table structure that conforms to the third normal form (3NF) relates to the module learning outcome, "Design or modify and document an object-oriented information system using appropriate tools," in the following ways:</p>
+											<ol>
+												<li>Using appropriate tools: Properly designing a table structure that conforms to 3NF requires understanding of database design principles and using tools such as ERD (Entity Relationship Diagram) to model the relationships between entities.</li>
+
+												<li>Object-oriented information system: A database is an object-oriented information system, and designing the table structure in 3NF ensures that the database is structured in a way that follows the principles of object-oriented design, such as encapsulation and inheritance.</li>
+
+												<li>Documenting: When designing a table structure that conforms to 3NF, it is important to document the design decisions made, such as the primary and foreign keys, and the relationships between tables. This documentation will be important for maintenance and future modifications of the system.</li>
+											</ol>
+
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-12">
+
+											<p>Regarding the module learning outcome, "Appraise and evaluate critically the concepts and principles of information systems," designing a table structure that conforms to 3NF relates to it in the following ways:</p>
+											<ol>
+												<li>Appraise: Understanding the concepts and principles of 3NF, such as the elimination of data redundancy and dependency, allows for the appraisal of existing table structures and identifying areas of improvement.</li>
+
+												<li>Evaluate critically: By understanding the benefits and drawbacks of 3NF, it is possible to evaluate critically the design decisions made and weigh the trade-offs between normalizing the data and maintaining performance.</li>
+
+												<li>Principles of information systems: 3NF is a fundamental principle of database design and is an important concept to understand when designing information systems. Understanding 3NF allows for the design of efficient and maintainable database systems.</li>
+											</ol>
+
+										</div>
+									</div>
+
+									<hr class="major" />
+
+									<h2>Entity Relationship Diagram</h2>
+
+									<span class="image main"><img src="../../../images/normalisation_in_practice.png" alt="" /></span>
+
+									<hr class="major" />
+
+								</section>
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../../assets/js/jquery.min.js"></script>
+			<script src="../../../assets/js/browser.min.js"></script>
+			<script src="../../../assets/js/breakpoints.min.js"></script>
+			<script src="../../../assets/js/util.js"></script>
+			<script src="../../../assets/js/main.js"></script>
+
+	</body>
+</html>

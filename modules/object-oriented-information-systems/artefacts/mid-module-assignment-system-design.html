@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Mid-Module Assignment: System Design</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../../assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Editorial</strong> by HTML5 UP</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Mid-Module Assignment: System Design</h1>
+									</header>
+
+									<p>For this assignment, I designed a new software system to manage self-checkout at a supermarket chain. The system will enable customers to scan and weigh items and make payments using various methods. Supermarket staff can override transactions if needed, such as when a price has been scanned incorrectly or when they need to check a customer's age for age-restricted items. The system will also connect to the supermarket's warehouse systems to manage inventory.</p>
+
+									<h2>Rationale</h2>
+
+									<p>The class diagram shows the proposed object model for the self-service checkout system. The Product class contains information about the products such as name, price, barcode, and weight. This class is be used to track the products that are being scanned and added to the customer's shopping basket as well as the products in the warehouse stock. The ShoppingBasket class keeps track of the products added to the basket by the customer and the total cost. It also has methods for adding and removing items from the basket, as well as calculating the total cost of the items in the basket. The PaymentProcessor class handles the payment process and includes methods for processing different payment methods.</p>
+
+									<p>The PointOfServiceSystem class acts as the main class and coordinates the interaction between the other classes. The Customer class keeps track of customer information such as name and customer ID. The LoyaltyCard class is a sub-class of the Customer class, and it handles the calculation of loyalty point based discounts. The WarehouseSystem class keeps track of the products in stock and updates the stock levels when a purchase is made. The Receipt class generates a receipt for the customer at the end of the transaction. The Staff class contains information about staff members. More importantly, it contains methods for overriding transactions in order to remove products that have been scanned and to approve age verification restricted products.</p>
+
+									<p>Overall, the design of the system is based on the functionality and data requirements for the self-service checkout system. The classes and relationships are chosen to provide a logical and efficient way to track and manage the various aspects of the checkout process, including scanning products, calculating the total cost, handling payments, and updating inventory. The use of different classes and relationships allows for a clear separation of concerns and makes the system more modular and flexible, making it easier to add new functionality or make changes in the future.</p>
+
+									<p>One key choice made in the design is the use of the PointOfServiceSystem class as the main class to coordinate the interaction between the other classes. This allows for a clear and centralized control flow for the checkout process, making it easier to understand and maintain. Another key choice is the use of the WarehouseSystem class to keep track of the products in stock and generate alerts for warehouse staff when necessary. This allows for real-time updates to stock levels and ensures that the shelves are always well-stocked, improving customer experience.</p>
+
+									<div class="row">
+										<div class="col-12">
+
+											<h3>A list of relationships between the classes:</h3>
+											<ul>
+												<li>Product and ShoppingBasket: The Product class is associated with the ShoppingBasket class through a one-to-many aggregation relationship, meaning that an instance of the ShoppingBasket class would contain multiple instances of the Product class. This relationship is also present between the Product class and the WarehouseSystem class.</li>
+												<li>Staff and WarehouseSystem: The Staff class is associated with the WarehouseSystem class through a one-to-many aggregation relationship, meaning that an instance of the WarehouseSystem class would contain multiple instances of the Staff class.</li>
+												<li>Customer and LoyaltyCard: The Customer class is associated with the LoyaltyCard class through an inheritance relationship, meaning that an instance of the LoyaltyCard class is a sub-class of the Customer class.</li>
+												<li>PointOfServiceSystem and ShoppingBasket, Receipt, PaymentProcessor, Customer, WarehouseSystem, and Staff: The PointOfServiceSystem class is associated with above mentioned classes through a composition relationship, meaning that an instance of the PointOfServiceSystem class would contain and use the other classes to coordinate the self-checkout process.</li>
+											</ul>
+
+										</div>
+									</div>
+
+									<hr class="major" />
+
+									<h2>Class Diagram</h2>
+
+									<span class="image main"><img src="../../../images/mid_module_assignment_-_system_design_-_class_diagram.png" alt="" /></span>
+
+									<hr class="major" />
+
+									<h2>Activity Diagram</h2>
+									
+									<span class="image main"><img src="../../../images/mid_module_assignment_-_system_design_-_activity_diagram.png" alt="" /></span>
+
+									<hr class="major" />
+
+									<h2>State Diagram</h2>
+									
+									<span class="image main"><img src="../../../images/mid_module_assignment_-_system_design_-_state_diagram.png" alt="" /></span>
+
+									<hr class="major" />
+
+								</section>
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../../assets/js/jquery.min.js"></script>
+			<script src="../../../assets/js/browser.min.js"></script>
+			<script src="../../../assets/js/breakpoints.min.js"></script>
+			<script src="../../../assets/js/util.js"></script>
+			<script src="../../../assets/js/main.js"></script>
+
+	</body>
+</html>
