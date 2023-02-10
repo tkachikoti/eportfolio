@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Programming Language Concepts</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../../assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Editorial</strong> by HTML5 UP</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Programming Language Concepts</h1>
+									</header>
+
+									<hr class="major" />
+
+									<p><strong>1. What is ReDOS and what part do 'Evil Regex' play?</strong></p>
+
+									<p>ReDOS (Regular Expression Denial of Service) is a type of security vulnerability that affects web applications that use regular expressions to process untrusted input (Davis et al, 2018). The vulnerability arises when the regular expression takes a long time to process, causing the application to hang or crash (Davis et al, 2018). This can result in a denial of service (DoS) attack, where the application becomes unavailable to users (Davis et al, 2018).</p>
+
+									<p>The term "Evil Regex" refers to regular expressions that are specifically crafted to trigger ReDOS vulnerabilities (Davis et al, 2018). The issue is that some regular expressions can become very slow when processing certain inputs, leading to a performance problem known as "catastrophic backtracking." (Davis et al, 2018) This can cause the application to become unresponsive, potentially leading to a denial of service attack (Davis et al, 2018).</p>
+
+									<p>To prevent ReDOS attacks, it's important to validate and sanitize input data before processing it with a regular expression (Davis et al, 2021). This can help prevent malicious input from causing performance issues (Davis et al, 2021). It's also important to choose regular expressions that are optimized for performance and to avoid using expressions that are known to be vulnerable to ReDOS attacks (Davis et al, 2021).</p>
+
+									<p><strong>2. What are the common problems associated with the use of regex? How can these be mitigated?</strong></p>
+
+									<p>Regular expressions, or regex, are patterns used to match and manipulate text. Although they are very powerful and efficient, they can also pose significant challenges (Michael et al, 2019). Some of the common problems associated with the use of regex include:</p>
+
+									<ol>
+										<li>Performance issues: Regex can become very slow when processing large amounts of data, especially when complex expressions are used (Michael et al, 2019).</li>
+										<li>Inadequate error handling: Regex can be difficult to debug, especially when patterns are long and complex, leading to unexpected results (Michael et al, 2019).</li>
+										<li>Security vulnerabilities: Regex can be susceptible to various security threats, including denial-of-service (ReDoS) attacks and code injection attacks (Michael et al, 2019).</li>
+									</ol>
+									
+									<p>To mitigate these problems, it is important to follow best practices when using regex. Some of these include:</p>
+									
+									<ol>
+										<li>Using simple and efficient expressions: Complex expressions can cause performance problems and make the code difficult to debug, so it is important to keep regex simple and efficient (Michael et al, 2019).</li>
+										<li>Using regex libraries: Regex libraries provide built-in error handling and security features, making it easier to write secure and robust code (Michael et al, 2019).</li>
+										<li>Testing regex thoroughly: Regex should be tested thoroughly, especially when used in security-critical applications, to avoid any unexpected results (Michael et al, 2019).</li>
+										<li>Understanding the limitations of regex: Regex is not suitable for all use cases, so it is important to understand its limitations and when to use other techniques (Michael et al, 2019).</li>
+									</ol>
+
+									<p><strong>3. How and why could regex be used as part of a security solution?</strong></p>
+
+									<p>Regular expressions (regex) are often used in computer programming as a way to match and manipulate text strings (Hoffman, 2020). The use of regex can also play a role in security solutions. Regex is often used in intrusion detection systems, firewalls, and web application firewalls to detect and prevent malicious activity (Hoffman, 2020). Regex can be used to match patterns in network traffic that indicate an attack, such as SQL injection or cross-site scripting (XSS) (Hoffman, 2020).</p>
+
+									<p>One of the benefits of using regex for security is that it provides a flexible and powerful means of pattern matching (Hoffman, 2020). This allows security professionals to define complex rules for detecting specific types of attacks, and to fine-tune these rules over time as new threats emerge (Hoffman, 2020). Additionally, regex is widely used across many programming languages and tools, making it an easy-to-use and widely recognized tool for security professionals (Hoffman, 2020).</p>
+
+									<p>However, there are also some potential drawbacks to using regex in security (Hoffman, 2020). Regex can be complex to understand and use correctly, and the use of regex can lead to false positive or false negative results if not implemented correctly (Hoffman, 2020). Additionally, regex can be slow to execute, especially when matching large amounts of data, and this can impact the performance of security systems (Hoffman, 2020).</p>
+
+									<p>To mitigate these risks, it is important to understand the limitations of regex and to thoroughly test regex expressions before deploying them in a security solution (Hoffman, 2020). It is also a good idea to use well-established regex libraries and to seek out resources that provide best practices and guidelines for using regex in security (Hoffman, 2020). By doing so, organizations can ensure that regex is used in an effective and secure manner as part of their overall security strategy (Hoffman, 2020).</p>
+
+									<h3>References:</h3>
+
+									<p>Davis, J. C., Coghlan, C. A., Servant, F., & Lee, D. (2018) The impact of regular expression denial of service (ReDoS) in practice: an empirical study at the ecosystem scale. In Proceedings of the 2018 26th ACM joint meeting on european software engineering conference and symposium on the foundations of software engineering (pp. 246-256).</p>
+
+									<p>Davis, J. C., Servant, F., & Lee, D. (2021) Using selective memoization to defeat regular expression denial of service (ReDoS). In 2021 IEEE symposium on security and privacy (SP) (pp. 1-17). IEEE.</p>
+
+									<p>Michael, L. G., Donohue, J., Davis, J. C., Lee, D., & Servant, F. (2019) Regexes are hard: Decision-making, difficulties, and risks in programming regular expressions. In 2019 34th IEEE/ACM International Conference on Automated Software Engineering (ASE) (pp. 415-426). IEEE.</p>
+
+									<p>Hoffman, A. (2020) Web Application Security: Exploitation and Countermeasures for Modern Web Applications China: O'Reilly Media.</p>
+
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../../assets/js/jquery.min.js"></script>
+			<script src="../../../assets/js/browser.min.js"></script>
+			<script src="../../../assets/js/breakpoints.min.js"></script>
+			<script src="../../../assets/js/util.js"></script>
+			<script src="../../../assets/js/main.js"></script>
+
+	</body>
+</html>
